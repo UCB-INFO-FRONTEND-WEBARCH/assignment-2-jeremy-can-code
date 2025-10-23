@@ -1,0 +1,194 @@
+/* Overall styling */
+body {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+/* Baking a lot into the header. Here, we make the banner, embedding the icon into the search bar nested in the HTML */
+.site-header {
+  width: 100%;
+  background-color: #dc4c3e;
+  padding: 10px 2px;
+  justify-content: left; 
+  display:flex;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: url("assets/check_icon.png"); 
+  background-repeat: no-repeat;
+  background-position: calc(100% - 70px) center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+
+}
+.search-form input[type= "text"] {
+  border: none;
+  outline: none;
+  background-color: #e47367;
+  background-image: url("assets/search_icon.png");
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  color:#ffffff;
+  
+}
+/* The white font wasn't displaying automatically because browser defaults to gray */
+.search-form input[type="text"]::placeholder {
+  color: #ffffff;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+
+.task-counter {
+  margin-left: auto;
+  padding-right: 30px;
+  color: #fff;
+  font-size: 12px;
+
+}
+
+/* Hamburger button borrowed from Lab */
+.hamburger {
+  display: block;              
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+  margin-left: 70px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin-left: auto;
+  margin: 5px 0;
+  transition: 0.2s;
+  border-radius: 2px;
+}
+
+/* Nav Bar Styling */
+.left-nav {
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fefbf2;
+  width: 300px;
+  height: 100vh;
+}
+
+@media (max-width: 480px) { /* Responsive design for CSS */ 
+  .left-nav {
+    display: none;
+  }
+}
+
+.left-nav a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.left-nav ul {
+  list-style-type: none;
+}
+.notification {
+  color: #7e7d79;
+  display: flex;
+  align-items:center;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.left-nav a:hover {
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.inbox {
+  background-image: url("assets/inbox_icon.png");
+  background-repeat: no-repeat;
+  margin-top: 40px;
+  margin-left: 70px; /* Matching the vertical alignment of the hamburger */
+  padding-left: 30px; 
+  min-height: 24px;  
+}
+
+.today {
+  background-image: url("assets/calendar_icon.png");
+  background-repeat: no-repeat;
+  margin-left: 70px;
+  padding-left: 30px; 
+  min-height: 24px;  
+}
+
+.upcoming {
+  background-image: url("assets/upcoming_icon.png");
+  background-repeat: no-repeat;
+  margin-left: 70px;
+  padding-left: 30px; 
+  min-height: 24px;  
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+main {
+  margin-top: 10px;
+}
+
+#section-title h1 {
+  font-size: 20px;
+}
+
+#to-do-list ul {
+  list-style-type: none;
+}
+
+#to-do-list li {
+  line-height: 2;
+}
+
+#to-do-list input[type="checkbox"] { /* I was having a hard time figuring out how to make my checkboxes round but found a helpful guide on Stackoverflow: https://stackoverflow.com/questions/29617200/how-to-make-checkboxes-rounded */
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align:middle;
+  border: 1px solid #000000;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#to-do-list input[type="checkbox"]:checked {
+  background-color: #dc4c3e;
+}
+
+#to-do-list hr {
+  width: 200%;
+}
