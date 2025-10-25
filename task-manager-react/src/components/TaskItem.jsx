@@ -1,7 +1,8 @@
-function TaskItem({ taskName }) {
+function TaskItem({ task }) {
     return (
       <li>
-        <input type="checkbox" name="todo" /> {taskName}
+        <input type="checkbox" checked={task.completed} /> 
+        {task.text}
       </li>
     )
   }

@@ -192,3 +192,22 @@ main {
 #to-do-list hr {
   width: 200%;
 }
+
+.add-task-form {
+  display: flex;
+  gap: 10px;
+  width: 400px;
+}
+
+.add-task-form input {
+  flex: 1;
+  padding: 10px;
+}
+
+.add-task-form button {
+  padding: 10px 20px;
+  background-color: #dc4c3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}

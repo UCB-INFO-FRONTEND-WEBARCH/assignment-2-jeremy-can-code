@@ -1,9 +1,27 @@
 import TaskCounter from './components/TaskCounter'
-import TaskForm from './components/TaskForm'
+import Task_form from './components/TaskForm'
 import TaskList from './components/TaskList'
+import { useState } from 'react'
 import './App.css'
 
-function App() {
+function App() { 
+  const [tasks, setTasks] = useState([
+    { id: 1, text: "Call Mom", completed: false },
+    { id: 2, text: "Buy the new issue of Scientific American", completed: false },
+    { id: 3, text: "Return the textbook to Josie", completed: false },
+    { id: 4, text: "Buy the new album by Rake", completed: false },
+    { id: 5, text: "Buy a giftcard for Dad", completed: false }
+  ])
+
+  const add_task = (task_text) => {
+    const new_task = {
+      id: Math.random(),
+      text: task_text,
+      completed: false
+    }
+    setTasks([...tasks, new_task])
+  }
+  
   return (
     <>
       <header className="site-header">
@@ -12,8 +30,7 @@ function App() {
           <span></span>
           <span></span>
         </label>
-        <TaskForm />           {/* Search form component */}
-        <TaskCounter />        {/* Counter component */}
+        <TaskCounter />
       </header>
 
       <div className="flex-wrapper">
@@ -30,16 +47,17 @@ function App() {
             </li>
           </ul>
         </nav>
-
+        
         <main>
           <section id="section-title">
             <h1>Inbox</h1>
           </section>
-          <TaskList />         {/* Task list component */}
+          <Task_form add_task={add_task} />
+          <TaskList tasks={tasks} />
         </main>
       </div>
     </>
   )
-}
+}  
 
 export default App
