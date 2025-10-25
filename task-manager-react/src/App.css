@@ -15,7 +15,7 @@ body {
   align-items: center;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-image: url("assets/check_icon.png"); 
+  background-image: url("/src/assets/check_icon.png"); 
   background-repeat: no-repeat;
   background-position: calc(100% - 70px) center;
 }
@@ -35,7 +35,7 @@ body {
   border: none;
   outline: none;
   background-color: #e47367;
-  background-image: url("assets/search_icon.png");
+  background-image: url("/src/assets/search_icon.png");
   background-repeat: no-repeat;
   border-radius: 5px;
   padding-top: 5px;
@@ -125,7 +125,7 @@ body {
   border-radius: 5px;
 }
 .inbox {
-  background-image: url("assets/inbox_icon.png");
+  background-image: url("/src/assets/inbox_icon.png");
   background-repeat: no-repeat;
   margin-top: 40px;
   margin-left: 70px; /* Matching the vertical alignment of the hamburger */
@@ -134,7 +134,7 @@ body {
 }
 
 .today {
-  background-image: url("assets/calendar_icon.png");
+  background-image: url("/src/assets/calendar_icon.png");
   background-repeat: no-repeat;
   margin-left: 70px;
   padding-left: 30px; 
@@ -142,7 +142,7 @@ body {
 }
 
 .upcoming {
-  background-image: url("assets/upcoming_icon.png");
+  background-image: url("/src/assets/upcoming_icon.png");
   background-repeat: no-repeat;
   margin-left: 70px;
   padding-left: 30px; 

@@ -10,7 +10,7 @@ function Task_form({add_task}) {
     } 
 
     return (
-        <form className="add-qtask-form" onSubmit={submit}>
+        <form className="add-task-form" onSubmit={submit}>
             <input 
                 placeholder="Add a new task..."
                 value={input_value}
