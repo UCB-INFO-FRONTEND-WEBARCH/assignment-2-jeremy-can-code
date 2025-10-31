@@ -5,8 +5,11 @@ function Task_form({add_task}) {
 
     const submit = (e) => {
         e.preventDefault()
-        add_task(input_value)
-        set_input_value("")
+        if (input_value.trim()) {
+            add_task(input_value)
+            set_input_value("")
+        }
+
     } 
 
     return (
