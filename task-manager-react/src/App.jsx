@@ -45,7 +45,7 @@ function App() {
   })
   console.log('filter:', filter)
   console.log('filtered_tasks:', filtered_tasks)
-  return (
+  return ( 
     <>
       <header className="site-header">
         <label htmlFor="menu-toggle" className="hamburger" aria-label="Menu">
