@@ -1,6 +1,6 @@
-function TaskCounter() {
+function TaskCounter({total, completed}) {
     return (
-      <p className="task-counter">30/5</p>
+      <p className="task-counter">{total}/{completed}</p>
     )
   }
   

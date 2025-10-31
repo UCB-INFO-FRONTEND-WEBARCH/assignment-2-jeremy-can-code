@@ -211,3 +211,39 @@ main {
   border: none;
   border-radius: 5px;
 }
+
+/*style for the delete button*/
+.delete-btn {
+  margin-left: auto;  /* Push to the right side */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+#to-do-list li {
+  line-height: 2;
+  display: flex;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.filters button {
+  padding: 5px 15px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.filters button.active {
+  background-color: #dc4c3e;
+  color: white;
+  border-color: #dc4c3e;
+}
